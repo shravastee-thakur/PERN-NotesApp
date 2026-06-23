@@ -37,10 +37,11 @@ export const registerUserSchema = userSchema.pick({
   name: true,
   email: true,
   password: true,
+  role: true,
 });
 
 export const loginUserSchema = userSchema.pick({
-  name: true,
+  email: true,
   password: true,
 });
 
