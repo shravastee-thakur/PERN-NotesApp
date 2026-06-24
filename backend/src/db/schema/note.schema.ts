@@ -30,4 +30,8 @@ export const createNoteRequestSchema = insertNoteSchema.pick({
   content: true,
 });
 
+export const updateNoteRequestSchema = createNoteRequestSchema.partial();
+
+export type UpdateNoteInput = z.infer<typeof updateNoteRequestSchema>;
+
 export type CreateNoteInput = z.infer<typeof createNoteRequestSchema>;
