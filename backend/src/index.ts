@@ -5,6 +5,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import { errorHandler } from "./middleware/error.middleware.js";
 import { authRouter } from "./routes/authRoutes.js";
+import { noteRouter } from "./routes/noteRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -20,7 +21,9 @@ app.use(
 app.use(cookieParser());
 
 app.use('/api/auth', authRouter);
-// app.use('/api/notes', notesRouter);
+// http://localhost:5000/api/auth/register
+app.use('/api/notes', noteRouter);
+// http://localhost:5000/api/notes/
 
 app.use(errorHandler);
 

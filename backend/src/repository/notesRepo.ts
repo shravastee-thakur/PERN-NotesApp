@@ -54,7 +54,7 @@ export const createNotes = async (userId: number, data: CreateNoteInput) => {
   return newNote;
 };
 
-export const udate = async (
+export const update = async (
   id: number,
   userId: number,
   data: UpdateNoteInput,
